@@ -1,0 +1,61 @@
+package inst;
+
+
+/**
+ * Created by sruthigelivi on 10/23/16.
+ */
+
+public class InsertionSort 
+{
+  
+  public static void main(String a[])
+  {
+       
+	int[] a1 = {11, 20, 1, 60, 13, 55, 69, 20};
+       
+	int[] b = Sort(a1);
+       
+	for (int i : b) 
+	{
+           
+	   System.out.print(i);
+    
+           System.out.print(", ");
+
+       
+	}
+  
+}
+    
+  public static int[] Sort(int[] p)
+  {
+
+        
+   	int t;
+       
+	for (int i = 1; i < p.length; i++) 
+	{
+          
+	  for(int j = i ; j > 0 ; j--)
+	  {
+               
+	     if(p[j] < p[j-1])
+	     {
+                   
+		 t = p[j];
+       
+                 p[j] = p[j-1];
+           
+	         p[j-1] = t;
+          
+             }
+      
+          }
+     
+        }
+      
+        return p;
+    
+  }
+
+}
